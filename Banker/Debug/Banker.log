@@ -1,0 +1,146 @@
+﻿  Main.cpp
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\mywindow.h(227,55): warning C4267: 'argument': conversion from 'size_t' to 'short', possible loss of data
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\mywindow.h(340,15): warning C4018: '<=': signed/unsigned mismatch
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\mywindow.h(385,56): warning C4267: 'argument': conversion from 'size_t' to 'short', possible loss of data
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\SFML.h(20,43): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\SFML.h(20,40): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\SFML.h(38,23): warning C4018: '<': signed/unsigned mismatch
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\SFML.h(65,43): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\SFML.h(65,40): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\SFML.h(86,23): warning C4018: '<': signed/unsigned mismatch
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\SFML.h(97,17): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\SFML.h(98,17): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\SFML.h(107,17): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\SFML.h(111,125): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\UI.h(128,39): warning C4018: '<=': signed/unsigned mismatch
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\UI.h(162,43): warning C4018: '<=': signed/unsigned mismatch
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\UI.h(197,43): warning C4018: '<=': signed/unsigned mismatch
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\UI.h(255,43): warning C4018: '<=': signed/unsigned mismatch
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\UI.h(279,47): warning C4018: '<=': signed/unsigned mismatch
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\UI.h(68,9): warning C4101: 'n_i': unreferenced local variable
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(31,38): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(34,42): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(40,47): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(46,54): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(46,48): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(52,55): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(52,48): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(55,38): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(58,42): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(86,14): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(145,14): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(340,14): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(351,15): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(552,24): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(553,21): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(554,21): warning C4244: 'initializing': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(560,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(560,34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(564,52): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(567,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(567,34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(664,36): warning C4244: 'return': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(669,39): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(673,39): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker.h(277,21): warning C4018: '<': signed/unsigned mismatch
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker.h(451,17): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker.h(452,21): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker.h(373,7): warning C4101: 'tmp': unreferenced local variable
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(229): warning C4715: 'banker_objects::get_request_id_index': not all control paths return a value
+  Banker.vcxproj -> C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Debug\Banker.exe
