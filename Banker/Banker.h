@@ -130,6 +130,7 @@ public:
 		}
 		for (int i = number_request; i < number_request + size; i++)
 		{
+			R.clear();
 			while (1)
 			{
 				std::cout << "Nhap pid: ";
@@ -160,6 +161,10 @@ public:
 				}
 			}
 			Request.push_back(R);
+			for (int i = 0; i < R.size(); i++)
+			{
+				cout << "\nDay la phan tu thu: "<< R[i];
+			}
 			Request[i].push_back(id[number_id++]);
 		}
 	}
@@ -418,6 +423,7 @@ public:
 				DrawPAR(window, P, R, id, Finish, Background, status_pos_x, need_pos_y, request_pos_x);
 				int result = Resource_Request(id[i], Request[i]); // kiểm tra xem request được nhận không
 				banker_objects.change_status(result, -1);//con so phia sau result la dung de chi ten cua tien trinh, o day khong co tien trinh nen ta dung -1 
+				banker_objects.get_Need(Need, i);
 				if (result == 1)//chấp nhận - đã cập nhật
 				{
 					/*R[i].y -= 70;*/

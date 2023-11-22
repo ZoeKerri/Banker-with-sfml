@@ -35,11 +35,11 @@ C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\SFML.h(85,40): warnin
           ]
 C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\SFML.h(106,23): warning C4018: '<': signed/unsigned mismatch
 C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\SFML.h(131,125): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\UI.h(128,39): warning C4018: '<=': signed/unsigned mismatch
-C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\UI.h(162,43): warning C4018: '<=': signed/unsigned mismatch
-C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\UI.h(197,43): warning C4018: '<=': signed/unsigned mismatch
-C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\UI.h(255,43): warning C4018: '<=': signed/unsigned mismatch
-C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\UI.h(279,47): warning C4018: '<=': signed/unsigned mismatch
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\UI.h(127,39): warning C4018: '<=': signed/unsigned mismatch
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\UI.h(161,43): warning C4018: '<=': signed/unsigned mismatch
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\UI.h(196,43): warning C4018: '<=': signed/unsigned mismatch
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\UI.h(254,43): warning C4018: '<=': signed/unsigned mismatch
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\UI.h(278,47): warning C4018: '<=': signed/unsigned mismatch
 C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\UI.h(68,9): warning C4101: 'n_i': unreferenced local variable
 C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(31,38): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
           with
@@ -106,47 +106,24 @@ C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(353,
           [
               T=float
           ]
-C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(557,24): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(506,36): warning C4244: 'return': conversion from 'const T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(558,21): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(511,39): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(559,21): warning C4244: 'initializing': conversion from 'const T' to 'int', possible loss of data
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(515,39): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(565,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(565,34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(569,52): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(572,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(572,34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(669,36): warning C4244: 'return': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(674,39): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(678,39): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker.h(277,21): warning C4018: '<': signed/unsigned mismatch
-C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker.h(434,17): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker.h(435,21): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker.h(348,7): warning C4101: 'tmp': unreferenced local variable
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker.h(164,22): warning C4018: '<': signed/unsigned mismatch
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker.h(282,21): warning C4018: '<': signed/unsigned mismatch
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker.h(440,17): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker.h(441,21): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker.h(353,7): warning C4101: 'tmp': unreferenced local variable
   Banker.vcxproj -> C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Debug\Banker.exe
