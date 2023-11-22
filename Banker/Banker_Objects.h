@@ -226,10 +226,12 @@ public:
 		{
 			if (Request[i][size_m - 1] == stoi(id_request)) return i;
 		}
+		return -1;
 	}
 	void get_Request(v<v<int>> Request, string request_id)//truyen string ID vao vi request no bi erase lien tuc nen viec truyen index la khong the
 	{
 		int index = get_request_id_index(Request, request_id);
+		if (index == -1) return;
 		for (int j = 0; j < nums_properties; j++)
 		{
 			request_properties[j].setString(to_string(Request[index][j]));
@@ -405,7 +407,7 @@ public:
 		draw_status(window);
 	}
 
-	void change_status(int state)//can them 1 bien state o ham addrequest de hien thi trang thai: 1 la nhan request,0 la wait, -1 la reject request cai nay lay result cung duoc 
+	void change_status(int state, int index)//can them 1 bien state o ham addrequest de hien thi trang thai: 1 la nhan request,0 la wait, -1 la reject request cai nay lay result cung duoc 
 		//con bien state =2 thi la Process Running dung trong khuc chay safety a
 	{
 		switch (state)
@@ -427,7 +429,8 @@ public:
 		}
 		case 2:
 		{
-			status.setString("This process is running");
+			string p_state = "Process " + to_string(index) + " is running";
+			status.setString(p_state);
 			break;
 		}
 		default:
@@ -436,6 +439,7 @@ public:
 			break;
 		}
 		}
+		status.setOrigin(status.getGlobalBounds().width / 2, status.getGlobalBounds().height / 2);
 	}
 
 	void running_Process(int index)//truyen index cua P dang chay hay la vi tri hang cua process do 
@@ -458,6 +462,7 @@ public:
 	void all_done()//ham nay dung de xuat khi tat ca P da xong het
 	{
 		status.setString("All Done");
+		status.setOrigin(status.getGlobalBounds().width / 2, status.getGlobalBounds().height / 2);
 		for (int i = 0; i < nums_properties; i++)
 		{
 			max_properties[i].setString("Done");

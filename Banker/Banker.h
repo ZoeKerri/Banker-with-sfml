@@ -348,7 +348,7 @@ public:
 		int tmp;
 		char key;
 		int number_request = Request.size();
-		banker_objects.init_banker_objects(1280, 640, 15, font, sf::Color::Red, Avail, Allocation, Max, Request, Need);//1280 va 800 la kich co man hinh, 15 la co chu
+		banker_objects.init_banker_objects(1280, 640, 15, font, sf::Color::Black, Avail, Allocation, Max, Request, Need);//1280 va 800 la kich co man hinh, 15 la co chu
 		int status_pos_x = banker_objects.get_status_table_pos_x();
 		int need_pos_y = banker_objects.get_need_pos_y();
 		int request_pos_x = banker_objects.get_request_pos_x();
@@ -417,11 +417,12 @@ public:
 				window.display();
 				DrawPAR(window, P, R, id, Finish, Background, status_pos_x, need_pos_y, request_pos_x);
 				int result = Resource_Request(id[i], Request[i]); // kiểm tra xem request được nhận không
-				banker_objects.get_Request(Request, to_string(id[i]));
-				banker_objects.draw_all(window);
+				banker_objects.change_status(result, -1);//con so phia sau result la dung de chi ten cua tien trinh, o day khong co tien trinh nen ta dung -1 
 				if (result == 1)//chấp nhận - đã cập nhật
 				{
 					/*R[i].y -= 70;*/
+					banker_objects.get_Request(Request, to_string(id[i]));
+					banker_objects.draw_all(window);
 					std::cout << "\t\tRequest cua Process " << id[i] << " duoc phep\n";
 					R[i].SetInfor(&window, sf::Color::Blue);
 					sf::Color current_color = sf::Color::Blue;
@@ -441,6 +442,8 @@ public:
 				}
 				else if (result == -1) // từ chối
 				{
+					banker_objects.get_Request(Request, to_string(id[i]));
+					banker_objects.draw_all(window);
 					std::cout << "\t\tRequest cua Process " << id[i] << " se gay deadlock\n";
 					std::cout << "\t\tTien hanh block Request cua " << "Process " << id[i] << "\n";
 					R[i].SetInfor(&window, sf::Color::Red);
@@ -450,6 +453,9 @@ public:
 				}
 				else //request sẽ chờ
 				{
+					banker_objects.get_Request(Request, to_string(id[i]));
+					banker_objects.draw_all(window);
+					R[i].SetInfor(&window, sf::Color::Yellow);
 					std::cout << "\t\tRequest cua Process " << id[i] << " dang cho\n";
 				}
 			}
@@ -459,6 +465,13 @@ public:
 			DrawPAR(window, P, R, id, Finish, Background, status_pos_x, need_pos_y, request_pos_x);
 			std::this_thread::sleep_for(std::chrono::milliseconds(700));
 			for (int i = 0; i < n; i++)
+			{
+				if (Finish[i]) banker_objects.Process_done(i);
+			}
+			for (int i = 0; i < n; i++)//tai sao lai co 2 cai giong nhau?
+				// cai nay dung de hien thi thong tin cu
+				//thong tin moi se duoc hien thi o vong lap sau
+				//thong tin cu nay khong bao gom Available da duoc cong them vao va allocation bi tru het di =0
 			{
 				if (Finish[i])
 				{
@@ -484,25 +497,38 @@ public:
 				}
 				if (Is_A_Smaller_Equal_B(i, Need, Avail))
 				{
+					int state = 2;
+					banker_objects.change_status(state, i);
+					banker_objects.running_Process(i);
 					std::cout << "\tProcess " << i << " dang chay\n";
 					List.push_back(i);
 					Plus_Two_Vector(Avail, Allocation[i]);
 					banker_objects.get_Need(Need, i);
 					banker_objects.get_Max(Max, i);
 					banker_objects.get_Available(Avail);
-					banker_objects.get_Allocation(Allocation, i);
 					DrawPAR(window, P, R, id, Finish, Background, status_pos_x, need_pos_y, request_pos_x);
 					banker_objects.draw_all(window);
 					Finish[i] = true;
 					Allocation[i] = v<int>(m, 0);
+					banker_objects.get_Allocation(Allocation, i);
 					std::cout << "\tProcess " << i << " da xong\n";
 					P[i].SetInfor(&window, sf::Color::Red);
 					break;
 				}
 			}
 		}
+		for (int i = 0; i < n; i++)//luc nay safety da chay xong het roi nen k can xet finish chi nua cho ton thoi gian
+		{
+			banker_objects.Process_done(i);
+		}
 		Print_String_Of_Safety(List);
 		DrawPAR(window, P, R, id, Finish, Background, status_pos_x, need_pos_y, request_pos_x);
+		banker_objects.draw_all(window);
+		window.display();
+		std::this_thread::sleep_for(std::chrono::seconds(3));
+		window.clear();
+		banker_objects.all_done();
+		banker_objects.draw_all(window);
 		window.display();
 		_getch();
 		window.close();
