@@ -324,31 +324,6 @@ public:
 		else return false;
 	}
 
-	//void graphics(Banker A, sf::Font font, sf::Color color)
-	//{
-	//	sf::RenderWindow window(sf::VideoMode(1280, 800), "BANKER");
-	//	banker_objects.init_banker_objects(1280, 800, 15, font, sf::Color::Red, A);//1280 va 800 la kich co man hinh, 15 la co chu
-	//	while (window.isOpen())
-	//	{
-	//		sf::Event event;
-	//		while (window.pollEvent(event))
-	//		{
-	//			if (event.type == sf::Event::Closed)
-	//				window.close();
-	//		}
-
-	//		window.clear();
-
-	//		// Vẽ hình chữ nhật với đường viền
-	//		banker_objects.draw_objects(window);
-	//		banker_objects.draw_process_name(window);
-	//		banker_objects.draw_resource(window);
-	//		banker_objects.draw_Available(window);
-	//		banker_objects.draw_Allocation(window);
-	//		window.display();
-	//	}
-
-	//}
 	void AddRequest()
 	{
 		sf::RenderWindow window(sf::VideoMode(1280, 640), "My Bank");
@@ -396,6 +371,10 @@ public:
 			tmpp.Set(10, 10, i);
 			P.push_back(tmpp);
 		}
+		DrawPAR(window, P, R, id, Finish, Background, status_pos_x, need_pos_y, request_pos_x);//o lan draw dau tien khong hieu tai sao no lai bi lech, nhung lan ve 2 thi duoc
+		//whyyy
+		//them lenh draw PAR day de fix loi do 
+		window.clear();
 		while (!Is_AllProcess_Finish(Finish))// Hoàn thành tất cả tiến trình
 		{
 			window.display();
@@ -433,7 +412,7 @@ public:
 			for (int i = 0; i < number_request; i++)
 			{
 				window.display();
-				std::this_thread::sleep_for(std::chrono::seconds(1));
+				std::this_thread::sleep_for(std::chrono::seconds(3));
 				DrawPAR(window, P, R, id, Finish, Background, status_pos_x, need_pos_y, request_pos_x);
 				window.display();
 				DrawPAR(window, P, R, id, Finish, Background, status_pos_x, need_pos_y, request_pos_x);
@@ -442,14 +421,19 @@ public:
 				banker_objects.draw_all(window);
 				if (result == 1)//chấp nhận - đã cập nhật
 				{
+					/*R[i].y -= 70;*/
 					std::cout << "\t\tRequest cua Process " << id[i] << " duoc phep\n";
 					R[i].SetInfor(&window, sf::Color::Blue);
-					while (R[i].x <= P[id[i]].x)
+					sf::Color current_color = sf::Color::Blue;
+					while (R[i].x <= P[id[i]].x)//co ve animation bi lech chinh duoc thi chinh
+						//them chinh mau trong day
 					{
-						R[i].SetInfor(&window, sf::Color::Blue);
+						R[i].SetInfor(&window, current_color);
 						window.display();
 						R[i].x += speed;
 						R[i].y = Cal_Y(R[i].x, R[i].Shape, P[id[i]].Shape);
+						banker_objects.draw_all(window);
+						current_color.a -= 5;
 					}
 					id.erase(id.begin() + i);
 					Request.erase(Request.begin() + i); number_request--;
