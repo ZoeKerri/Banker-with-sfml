@@ -472,7 +472,13 @@ public:
 			need_properties[i].setString("Done");
 		}
 	}
-
+	void request_done()
+	{
+		for (int i = 0; i < nums_properties; i++)
+		{
+			request_properties[i].setString("Done");
+		}
+	}
 	void init_status()
 	{
 		status_table.setSize(sf::Vector2f(200.0, 100.0));

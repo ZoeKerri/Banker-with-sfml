@@ -106,17 +106,17 @@ C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(353,
           [
               T=float
           ]
-C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(506,36): warning C4244: 'return': conversion from 'const T' to 'int', possible loss of data
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(512,36): warning C4244: 'return': conversion from 'const T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(511,39): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(517,39): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(515,39): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+C:\HUIT file\HK3- HUIT\CTRR\Banker-s-Algorithm-main\Banker\Banker_Objects.h(521,39): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
