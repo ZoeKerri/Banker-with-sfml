@@ -35,8 +35,5 @@
     <ClInclude Include="Banker_Objects.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Graphics_Banker.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

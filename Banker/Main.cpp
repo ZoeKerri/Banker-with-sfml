@@ -8,7 +8,6 @@
 #include"UI.h"
 #include"Banker.h"
 #include"SFML.h"
-#include"Graphics_Banker.h"
 
 #define v std::vector
 #define pause system("pause")

@@ -144,7 +144,6 @@
   <ItemGroup>
     <ClInclude Include="Banker.h" />
     <ClInclude Include="Banker_Objects.h" />
-    <ClInclude Include="Graphics_Banker.h" />
     <ClInclude Include="mywindow.h" />
     <ClInclude Include="SFML.h" />
     <ClInclude Include="UI.h" />
