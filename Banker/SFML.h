@@ -114,8 +114,8 @@ void DrawRequest(sf::RenderWindow* window, int x, int y, v <int>id, v<Rq>& R)
 void DrawPAR(sf::RenderWindow& window, v<Process>& P, v<Rq>& R, v<int>id, v<bool>Finish, sf::RectangleShape Background, int status_pos_x,int need_pos_y,int request_pos_x )
 {
     int p_pos_x = status_pos_x;
-    int p_pos_y = need_pos_y -(70 * (P.size() / 2))-80;
-    int r_pos_y = need_pos_y - (70 *(R.size() / 2))-80;
+    int p_pos_y = 210;
+    int r_pos_y =210;
     int r_pos_x = request_pos_x;
     window.draw(Background);
     DrawRequest(&window, r_pos_x, r_pos_y, id, R); 

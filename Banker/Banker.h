@@ -161,10 +161,6 @@ public:
 				}
 			}
 			Request.push_back(R);
-			for (int i = 0; i < R.size(); i++)
-			{
-				cout << "\nDay la phan tu thu: "<< R[i];
-			}
 			Request[i].push_back(id[number_id++]);
 		}
 	}
@@ -331,9 +327,9 @@ public:
 
 	void AddRequest()
 	{
-		sf::RenderWindow window(sf::VideoMode(1280, 640), "My Bank");
-		sf::RectangleShape Background(sf::Vector2f(1280, 640));
-		Background.setFillColor(sf::Color(37,150,190,255));
+		sf::RenderWindow window(sf::VideoMode(1280, 800), "My Bank");
+		sf::RectangleShape Background(sf::Vector2f(1280, 800));
+		Background.setFillColor(sf::Color (37,150,190,255));
 		banker_objects banker_objects(GetN(), GetM());
 		float speed = 30;
 		sf::Font font;
@@ -408,6 +404,7 @@ public:
 			}
 			if (flag_Event) // Nếu có Enter thì nhập request ( gồm id ) vào thêm vào vị trí cuối
 			{
+
 				Nhap_Request(id, Finish);
 				number_request = Request.size();
 				window.clear();
@@ -423,7 +420,6 @@ public:
 				DrawPAR(window, P, R, id, Finish, Background, status_pos_x, need_pos_y, request_pos_x);
 				int result = Resource_Request(id[i], Request[i]); // kiểm tra xem request được nhận không
 				banker_objects.change_status(result, -1);//con so phia sau result la dung de chi ten cua tien trinh, o day khong co tien trinh nen ta dung -1 
-				banker_objects.get_Need(Need, i);
 				if (result == 1)//chấp nhận - đã cập nhật
 				{
 					/*R[i].y -= 70;*/
@@ -528,16 +524,12 @@ public:
 		{
 			banker_objects.Process_done(i);
 		}
-		window.display();
-		std::this_thread::sleep_for(std::chrono::seconds(3));
-		//hai dong tren them vao de hien thi Process cuoi chay do ben tren dong while khi xong cai cuoi la tu thoat roi k con thuc hien tinh toan hay hien thi gi nua
 		Print_String_Of_Safety(List);
 		DrawPAR(window, P, R, id, Finish, Background, status_pos_x, need_pos_y, request_pos_x);
 		banker_objects.draw_all(window);
 		window.display();
 		std::this_thread::sleep_for(std::chrono::seconds(3));
 		window.clear();
-		DrawPAR(window, P, R, id, Finish, Background, status_pos_x, need_pos_y, request_pos_x);
 		banker_objects.all_done();
 		banker_objects.draw_all(window);
 		window.display();

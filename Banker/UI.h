@@ -102,6 +102,7 @@ void UI_Nhap(int &n,int &m,v<int>& Avail, v<v<int>>& Allocation, v<v<int>>& Max,
     Max.clear();
     Max.resize(n, v<int>(m, 0));
     Request.clear();
+    
     Need.clear();
     Need.resize(n, v<int>(m, 0));
     Box(1, 4, 118, 21, 159, " ");
@@ -227,7 +228,6 @@ void UI_Nhap(int &n,int &m,v<int>& Avail, v<v<int>>& Allocation, v<v<int>>& Max,
                     break;
                 }
         }
-        Request.clear();
         Request.resize(k, v<int>(m + 1, 0));
         for (int i = 0; i < k; i++)
         {

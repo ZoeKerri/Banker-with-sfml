@@ -142,7 +142,7 @@ public:
 	void set_Avail_pos()
 	{
 		sf::Vector2f pos(BK_objects[0].getPosition().x - BK_objects[0].getSize().x / 2, BK_objects[0].getPosition().y);
-		int move_x = BK_objects[0].getSize().x / 4;
+		int move_x = BK_objects[0].getSize().x / (nums_properties+1);
 		for (int i = 0; i < nums_properties; i++)
 		{
 			pos.x += move_x;
@@ -171,6 +171,13 @@ public:
 		}
 	}
 
+	void request_done()
+	{
+		for (int i = 0; i < nums_properties; i++)
+		{
+			request_properties[i].setString("Done");
+		}
+	}
 	void init_Max_Request_Need(int char_size, sf::Color color)
 	{
 		for (int i = 0; i < nums_properties; i++)
@@ -472,13 +479,161 @@ public:
 			need_properties[i].setString("Done");
 		}
 	}
-	void request_done()
+	void init_id(v<v<int>>request, v<v<int>> allocation)
 	{
-		for (int i = 0; i < nums_properties; i++)
+		int n_request = request.size();
+		int m_request;
+		if (m_request == 0) return;
+		else
 		{
-			request_properties[i].setString("Done");
+			m_request = request[0].size();
+		}
+		int n_process = allocation.size();
+		int m_process;
+		if (n_process == 0) return;
+		else
+		{
+			m_process = allocation[0].size();
+		}
+		sf::Text temp_request;
+		sf::Text temp_process;
+		for (int i = 0; i < m_request; i++)//ta can so hang de xem coi co bao nhieu request
+		{
+			temp_request.setString(to_string(request[i][n_request - 1]));
+			temp_request.setCharacterSize(15);
+			temp_request.setFont(font);
+			temp_request.setFillColor(sf::Color::Black);
+			id_request.push_back(temp_request);
+		}
+		for (int i = 0; i < m_process; i++)//ta can so hang de lam proccess dang chay
+		{
+			temp_process.setString(to_string(i));
+			temp_process.setCharacterSize(15);
+			temp_process.setFont(font);
+			temp_process.setFillColor(sf::Color::Black);
+			id_process.push_back(temp_process);
 		}
 	}
+
+	void add_Request(int request_id)//ham nay dung de them 1 request vao cuoi khi co nguoi nhap request vao
+	{
+		sf::Text temp_request;
+		temp_request.setString(to_string(request_id));
+		temp_request.setCharacterSize(15);
+		temp_request.setFont(font);
+		temp_request.setFillColor(sf::Color::Black);
+		id_request.push_back(temp_request);
+		sf::CircleShape temp_circle(10);
+		temp_circle.setOrigin(5.0, 5.0);
+		temp_circle.setFillColor(sf::Color::Green);
+		request_circle.push_back(temp_circle);
+		request_circle[request_circle.size() - 1].setPosition(request_circle[request_circle.size() - 2].getPosition().x, request_circle[request_circle.size() - 2].getPosition().y + 10);
+	}
+
+	void init_process_request_circle(v<v<int>>request, v<v<int>> allocation)
+	{
+		int n_request = request.size();
+		int m_request;
+		if (m_request == 0) return;
+		else
+		{
+			m_request = request[0].size();
+		}
+		int n_process = allocation.size();
+		int m_process;
+		if (n_process == 0) return;
+		else
+		{
+			m_process = allocation[0].size();
+		}
+		sf::CircleShape temp_circle(10);
+		temp_circle.setOrigin(5.0, 5.0);
+		temp_circle.setFillColor(sf::Color::Green);
+		for (int i = 0; i < m_request; i++)
+		{
+			request_circle.push_back(temp_circle);
+		}
+		for (int i = 0; i < m_process; i++)
+		{
+			process_circle.push_back(temp_circle);
+		}
+	}
+
+	void set_id_and_circle_pos()
+	{
+		int begin_draw_y_pos = BK_objects[0].getPosition().y + BK_objects[0].getSize().y;//vi tri y bat dau ve request va process
+		int request_pos_x = BK_objects[1].getPosition().x + BK_objects[1].getSize().x;
+		int process_pos_x = BK_objects[0].getPosition().x;
+		int move_y = 10;
+		int process_size = process_circle.size();
+		int request_size = request_circle.size();
+		for (int i = 0; i < process_size; i++)//vi da set origin tu truoc r nen k can setorigin chi nua
+		{
+			process_circle[i].setPosition(process_pos_x, begin_draw_y_pos);
+			id_process[i].setPosition(process_circle[i].getPosition().x, process_circle[i].getPosition().y);
+			begin_draw_y_pos += move_y;
+		}
+		begin_draw_y_pos = BK_objects[0].getPosition().y + BK_objects[0].getSize().y;
+		for (int i = 0; i < request_size; i++)
+		{
+			request_circle[i].setPosition(request_pos_x, begin_draw_y_pos);
+			id_request[i].setPosition(request_circle[i].getPosition().x, request_circle[i].getPosition().y);
+			begin_draw_y_pos += move_y;
+		}
+
+	}
+	int find_request_id_index(string Request_id)//tra ve gia tri index cua id request dang tim
+	{
+		int size = id_request.size();
+		for (int i = 0; i < size; i++)
+		{
+			if (Request_id == id_request[i].getString()) return i;
+		}
+	}
+	int find_process_id_index(string Process_id)//tra ve gia tri index cua id process dang tim
+	{
+		int size = id_process.size();
+		for (int i = 0; i < size; i++)
+		{
+			if (Process_id == id_process[i].getString()) return i;
+		}
+	}
+	void delete_request(string Request_id)//ham nay dung de xoa request khi xong
+	{
+		int size = request_circle.size();
+		int index = find_request_id_index(Request_id);
+		if (size == 1)
+		{
+			id_request.erase(id_request.begin() + index);
+			id_request.shrink_to_fit();
+			return;
+		}
+		for (int i = size - 1; i > index; i++)
+		{
+			request_circle[i].setPosition(request_circle[i - 1].getPosition());
+		}
+		id_request.erase(id_request.begin() + index);
+		id_request.shrink_to_fit();
+	}
+
+	void delete_process(string Process_id)
+	{
+		int size = process_circle.size();
+		int index = find_process_id_index(Process_id);
+		if (size == 1)
+		{
+			id_process.erase(id_request.begin() + index);
+			id_process.shrink_to_fit();
+			return;
+		}
+		for (int i = size - 1; i > index; i++)
+		{
+			process_circle[i].setPosition(process_circle[i - 1].getPosition());
+		}
+		id_process.erase(id_process.begin() + index);
+		id_process.shrink_to_fit();
+	}
+
 	void init_status()
 	{
 		status_table.setSize(sf::Vector2f(200.0, 100.0));
@@ -493,14 +648,23 @@ public:
 		status_name.setOrigin(status_name.getGlobalBounds().width / 2, status_name.getGlobalBounds().height / 2);
 		status_name.setPosition(status_table.getPosition().x, status_table.getPosition().y - status_table.getSize().y / 2 + status_name.getGlobalBounds().height);
 
-		status.setCharacterSize(10);
+		status.setCharacterSize(14);
 		status.setFillColor(sf::Color::Black);
-		status.setString("A Project From The ERROR Team");
+		status.setString("The ERROR Team");
 		status.setFont(font);
 		status.setOrigin(status.getGlobalBounds().width / 2, status.getGlobalBounds().height / 2);
 		status.setPosition(status_table.getPosition().x, status_table.getPosition().y);
 	}
 
+	void change_request_color(string request_id)
+	{
+		request_circle[find_request_id_index(request_id)].setFillColor(sf::Color::Red);
+	}
+
+	void change_process_color(string process_id)
+	{
+		process_circle[find_process_id_index(process_id)].setFillColor(sf::Color::Red);
+	}
 
 	sf::Vector2f get_bk_objects_request_pos()
 	{

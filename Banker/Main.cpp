@@ -26,7 +26,7 @@ int main()
     font.loadFromFile("arial.ttf");
 	string nd[6] = { "1. Nhap File","2. Nhap thu cong","3. Kiem tra an toan","4. Kiem tra DEADLOCK","5. Mo phong Banker","0. Dung chuong trinh" };
 	int sl = 6;
-    string file[3] = { "Safety.txt","Deadlock1.txt","Deadlock2.txt" };
+    string file[4] = { "Safety.txt","Deadlock1.txt","Deadlock2.txt","Demo.txt"};
 	int h = 2, w = MaxLengthString(nd, sl) + 2;
 	int x = 3, y = 5;
 	int xptr = x, yptr = y;
@@ -134,7 +134,7 @@ loop:
                     switch (choice)
                     {
                     case 0:
-                        CheckEmpty = !(B.UI_add_File(file, 3));
+                        CheckEmpty = !(B.UI_add_File(file, 4));
                         break;
                     case 1:
                         UI_Nhap(n, m, Avail, Allocation, Max, Request, Need);
